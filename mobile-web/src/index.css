@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #FAF9F6;
+    --surface-color: #FFFFFF;
+    --text-primary: #1A1C1A;
+    --text-secondary: #444748;
+    --divider-color: #E7E4DE;
+  }
+
+  .dark {
+    --bg-color: #0A0A0A;
+    --surface-color: #151515;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A8A8A8;
+    --divider-color: #2A2A2A;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar for Horizontal Carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.dark .glass-panel {
+  background: rgba(21, 21, 21, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Label Caps Utility */
+.label-caps {
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
