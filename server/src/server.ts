@@ -19,7 +19,7 @@ import { errorHandler } from './middleware/errorHandler';
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
@@ -51,6 +51,10 @@ app.use('/api/admin', adminRoutes);
 // Error Handling Middleware
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`LUXORA Backend API running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`LUXORA Backend API running on port ${PORT}`);
+  });
+}
+
+export default app;
