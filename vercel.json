@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "installCommand": "npm --prefix server install && npm --prefix mobile-web install",
   "buildCommand": "npm --prefix server run build && npm --prefix mobile-web run build",
   "outputDirectory": "mobile-web/dist",
   "rewrites": [
