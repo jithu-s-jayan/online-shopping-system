@@ -7,7 +7,14 @@
     "dev:web": "npm --prefix mobile-web run dev",
     "build:server": "npm --prefix server run build",
     "build:web": "npm --prefix mobile-web run build",
+    "build": "npm --prefix server run build && npm --prefix mobile-web run build",
     "seed": "npm --prefix server run seed",
     "start": "npm --prefix server start"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
   }
 }
